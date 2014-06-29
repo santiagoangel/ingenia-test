@@ -79,18 +79,25 @@ mvn clean install tomee:run
 
 
 ###Autentificar aplicación:
+```
 curl -X POST -H 'Content-Type: application/json' -H 'Credentials: admin' -H 'APIKey: testpassword' -H 'ApplicationName: test' http://localhost:8080/ingenia/ws/auth
+```
 
 ###usar el token de respuesta en el siguiente comando
 ###Agregar Aplicación
+```
 curl -v -X POST -d '{"app":{"appname":"test","company":"CO","description":"short description"}}' -H 'Content-Type: application/json' -H 'AUTH-TOKEN: 4861bdea-a2d3-4217-b8f1-694f91933eb0' http://localhost:8080/ingenia/ws/apps/
+```
 
 ###usar el nuevo token
 ###Editar Aplicación
+```
 curl -v -X PUT -d '{"app":{"appname":"test","company":"test CO","description":"short description"}}' -H 'Content-Type: application/json' -H 'AUTH-TOKEN: 17ebe87e-d610-457a-9100-2f4fb7b32d4a' http://localhost:8080/ingenia/ws/apps/test
+```
 
 ###usar un nuevo token
 ###Eliminar Aplicación
+```
 curl -v -X DELETE -H 'Content-Type: application/json' -H 'AUTH-TOKEN: 1063faf0-b970-473e-be3b-31344282828e' http://localhost:8080/ingenia/ws/apps/test
 
 ```
