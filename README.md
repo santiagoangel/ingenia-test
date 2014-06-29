@@ -12,9 +12,9 @@ Utiliza Java WS.RS para crear servicios web REST con respuesta JSON.
 Es un proyecto validado para JEE 6 y también se ejecuta en Tomcat ocupando los jars JEE del proyecto TomEE.
 
 
-#
-Requisitos:
+#Requisitos:
 
+```
 (Fedora 20)
 yum install mariadb-server
 systemctl start mariadb.service
@@ -62,20 +62,17 @@ MariaDB [ingenia]> select *from users;
 
 MariaDB [ingenia]> 
 
+```
 
-
-###
-Configuración:
+###Configuración:
 Editar src/main/webapp/WEB-INF/resources.xml de acuerdo a nuestros datos de acceso a BD.
 
-###
-Ejecución:
+###Ejecución:
 cd ingenia
 mvn clean install tomee:run
 
 
-###
-Pruebas:
+###Pruebas:
 
 
 #Autentificar aplicación:
