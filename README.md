@@ -12,7 +12,7 @@ Utiliza Java WS.RS para crear servicios web REST con respuesta JSON.
 Es un proyecto validado para JEE 6 y también se ejecuta en Tomcat ocupando los jars JEE del proyecto TomEE.
 
 
-####
+###
 Requisitos:
 
 (Fedora 20)
