@@ -65,15 +65,18 @@ MariaDB [ingenia]>
 ```
 
 ###Configuración:
+```
 Editar src/main/webapp/WEB-INF/resources.xml de acuerdo a nuestros datos de acceso a BD.
+```
 
 ###Ejecución:
-cd ingenia
+```
+cd ingenia-test
 mvn clean install tomee:run
-
+```
 
 ###Pruebas:
-
+```
 
 #Autentificar aplicación:
 curl -X POST -H 'Content-Type: application/json' -H 'Credentials: admin' -H 'APIKey: testpassword' -H 'ApplicationName: test' http://localhost:8080/ingenia/ws/auth
@@ -90,7 +93,7 @@ curl -v -X PUT -d '{"app":{"appname":"test","company":"test CO","description":"s
 #Eliminar Aplicación
 curl -v -X DELETE -H 'Content-Type: application/json' -H 'AUTH-TOKEN: 1063faf0-b970-473e-be3b-31344282828e' http://localhost:8080/ingenia/ws/apps/test
 
-
+```
 
 
 
